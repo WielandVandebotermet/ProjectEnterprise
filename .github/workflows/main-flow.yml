@@ -3,9 +3,9 @@ name: Build and deliver containers
 on: push
 
 jobs:
-  Group:
+  group:
     runs-on: ubuntu-latest
-    name: Java 17 build, test, deliver Group container
+    name: Java 17 build, test, deliver group container
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -18,20 +18,20 @@ jobs:
           distribution: adopt
       
       - name: Build, test and package project
-        working-directory: ./Group
+        working-directory: ./group
         run: mvn package -DskipTests
 
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/Group:latest ./Group
+        run: docker build -t ${{ secrets.DOCKER_USER }}/group:latest ./group
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/Group:latest
-  Koers:
+        run: docker push ${{ secrets.DOCKER_USER }}/group:latest
+  koers:
     runs-on: ubuntu-latest
-    name: Java 17 build, test, deliver Koers container
+    name: Java 17 build, test, deliver koers container
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -44,17 +44,17 @@ jobs:
           distribution: adopt
 
       - name: Build, test and package project
-        working-directory: ./Koers
+        working-directory: ./koers
         run: mvn package -DskipTests
 
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/Koers:latest ./Koers
+        run: docker build -t ${{ secrets.DOCKER_USER }}/koers:latest ./koers
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/Koers:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/koers:latest
   wielrennen:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver wielrennen container
