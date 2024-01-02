@@ -27,7 +27,7 @@ services:
  group:
   depends_on:
     - mongo-group
-  image: wielandvandebotermet/group2
+  image: wielandvandebotermet/group3
   ports:
     - 8080:8080
   links:
