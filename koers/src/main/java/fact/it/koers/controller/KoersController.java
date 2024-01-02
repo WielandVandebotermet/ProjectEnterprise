@@ -38,8 +38,6 @@ public class KoersController {
          koersService.editKoers(id, points, name);
     }
 
-
-
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
     public List<KoersResponse> getAllKoerses() {

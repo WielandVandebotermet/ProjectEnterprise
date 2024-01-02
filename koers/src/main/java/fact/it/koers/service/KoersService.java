@@ -71,7 +71,6 @@ public class KoersService {
         koersRepository.save(koers);
 
     }
-
     public void deleteKoers(int id){
         koersRepository.deleteById((long) id);
     }
