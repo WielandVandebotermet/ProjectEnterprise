@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupResponse {
-    private String id;
+    private long id;
     private String name;
     private String GroupCode;
 }

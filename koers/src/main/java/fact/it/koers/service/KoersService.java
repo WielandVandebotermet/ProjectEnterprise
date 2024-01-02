@@ -82,12 +82,6 @@ public class KoersService {
             return koers.stream().map(this::mapToProductResponse).toList();
         }
 
-        public List<KoersResponse> getKoersByName(List<String> Name) {
-            List<Koers> koers = koersRepository.FindByNameIn(Name);
-
-            return koers.stream().map(this::mapToProductResponse).toList();
-        }
-
         private KoersResponse mapToProductResponse(Koers koers) {
             return KoersResponse.builder()
                     .id(koers.getId())

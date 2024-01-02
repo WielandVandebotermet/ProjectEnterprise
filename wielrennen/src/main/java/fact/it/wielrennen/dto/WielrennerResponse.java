@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class WielrennerResponse {
-    private String id;
+    private long id;
     private String Firstname;
     private String Lastname;
     private String GroupCode;

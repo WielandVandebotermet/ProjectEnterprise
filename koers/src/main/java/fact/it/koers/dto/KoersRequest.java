@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class KoersRequest {
-    private String id;
+    private long id;
     private String Name;
     private String WielrennerId;
     private int Points;

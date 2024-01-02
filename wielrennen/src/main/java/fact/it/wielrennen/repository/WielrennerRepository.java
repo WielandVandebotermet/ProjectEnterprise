@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 @Transactional
 public interface WielrennerRepository extends JpaRepository<Wielrenner, Long> {
-    List<Wielrenner> FindByGroupCodeIn(List<String> GroupCode);
+    //List<Wielrenner> FindByGroupCodeIn(List<String> GroupCode);
 }

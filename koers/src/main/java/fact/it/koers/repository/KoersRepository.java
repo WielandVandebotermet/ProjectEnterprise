@@ -10,5 +10,4 @@ import java.util.List;
 @Repository
 @Transactional
 public interface KoersRepository extends JpaRepository<Koers, Long> {
-    List<Koers> FindByNameIn(List<String> Name);
 }

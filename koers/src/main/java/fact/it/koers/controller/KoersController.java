@@ -3,6 +3,7 @@ package fact.it.koers.controller;
 import fact.it.koers.service.KoersService;
 import fact.it.koers.dto.KoersRequest;
 import fact.it.koers.dto.KoersResponse;
+import fact.it.koers.model.Koers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -37,12 +38,7 @@ public class KoersController {
          koersService.editKoers(id, points, name);
     }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<KoersResponse> getAllProductsByName
-            (@RequestParam List<String> Name) {
-        return koersService.getKoersByName(Name);
-    }
+
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)

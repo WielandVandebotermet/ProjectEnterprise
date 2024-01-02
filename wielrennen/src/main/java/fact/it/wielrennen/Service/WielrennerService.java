@@ -91,11 +91,14 @@ public class WielrennerService {
         return wielrenner.stream().map(this::mapToProductResponse).toList();
     }
 
+    /*
     public List<WielrennerResponse> getAllWielrennersByGroupcode(List<String> GroupCode) {
         List<Wielrenner> wielrenner = wielrennerRepository.FindByGroupCodeIn(GroupCode);
 
         return wielrenner.stream().map(this::mapToProductResponse).toList();
     }
+
+     */
 
     private WielrennerResponse mapToProductResponse(Wielrenner wielrenner) {
         return WielrennerResponse.builder()

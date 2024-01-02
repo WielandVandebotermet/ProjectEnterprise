@@ -13,7 +13,7 @@ import lombok.*;
 public class Koers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private long id;
     private String Name;
     private String WielrennerId;
     private int Points;

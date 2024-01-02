@@ -28,12 +28,14 @@ public class Wielrennercontroller {
         return wielrennerService.getAllwielrenners();
     }
 
+    /*
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<WielrennerResponse> getAllWielrennersByGroupCode
             (@RequestParam List<String> GroupCode) {
         return wielrennerService.getAllWielrennersByGroupcode(GroupCode);
     }
+     */
 
     @GetMapping("/delete")
     @ResponseStatus(HttpStatus.OK)

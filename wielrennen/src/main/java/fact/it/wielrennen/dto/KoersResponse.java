@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class KoersResponse {
-    private String id;
+    private long id;
     private String Name;
     private String WielrennerId;
     private int Points;
