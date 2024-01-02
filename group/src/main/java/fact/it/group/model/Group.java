@@ -13,6 +13,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 public class Group {
     private String id;
-    private String name;
+    private String Name;
     private String GroupCode;
 }

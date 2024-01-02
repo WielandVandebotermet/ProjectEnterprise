@@ -16,31 +16,31 @@ public class KoersService {
 
     @PostConstruct
     public void LoadData() {
-        if (koersRepository.count() > 0) {
+        if (koersRepository.count() <= 0) {
             Koers koers = new Koers();
             koers.setName("Exact Cross Loenhout");
             koers.setWielrennerId("1");
             koers.setPoints(6);
 
             Koers koers1 = new Koers();
-            koers.setName("Telenet Superprestige Diegem");
-            koers.setWielrennerId("1");
-            koers.setPoints(9);
+            koers1.setName("Telenet Superprestige Diegem");
+            koers1.setWielrennerId("1");
+            koers1.setPoints(9);
 
             Koers koers2 = new Koers();
-            koers.setName("Exact Cross Loenhout");
-            koers.setWielrennerId("2");
-            koers.setPoints(6);
+            koers2.setName("Exact Cross Loenhout");
+            koers2.setWielrennerId("2");
+            koers2.setPoints(6);
 
             Koers koers3 = new Koers();
-            koers.setName("Exact Cross Loenhout");
-            koers.setWielrennerId("3");
-            koers.setPoints(6);
+            koers3.setName("Exact Cross Loenhout");
+            koers3.setWielrennerId("3");
+            koers3.setPoints(6);
 
             Koers koers4 = new Koers();
-            koers.setName("Exact Cross Loenhout");
-            koers.setWielrennerId("4");
-            koers.setPoints(6);
+            koers4.setName("Exact Cross Loenhout");
+            koers4.setWielrennerId("4");
+            koers4.setPoints(6);
 
             koersRepository.save(koers);
             koersRepository.save(koers1);

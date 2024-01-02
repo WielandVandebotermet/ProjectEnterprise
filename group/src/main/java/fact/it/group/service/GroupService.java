@@ -4,6 +4,7 @@ import fact.it.group.dto.GroupRequest;
 import fact.it.group.dto.GroupResponse;
 import fact.it.group.model.Group;
 import fact.it.group.repository.GroupRepository;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -13,10 +14,36 @@ import java.util.List;
 public class GroupService {
     private final GroupRepository groupRepository;
 
+    @PostConstruct
+    public void LoadData() {
+        if (groupRepository.count() <= 0) {
+            Group group =  Group.builder()
+                .Name("Etixx-Quick Step")
+                .GroupCode("EQS")
+                .build();
+
+            Group group1 = Group.builder()
+                .Name("FDJ")
+                .GroupCode("FDJ")
+                .build();
+
+            Group group2= Group.builder()
+                .Name("Lotto Soudal")
+                .GroupCode("LTS")
+                .build();
+
+            groupRepository.save(group);
+            groupRepository.save(group1);
+            groupRepository.save(group2);
+
+        }
+    }
+
+
     public void createGroup(GroupRequest groupRequest){
         Group group = Group.builder()
                 .GroupCode(groupRequest.getGroupCode())
-                .name(groupRequest.getName())
+                .Name(groupRequest.getName())
                 .build();
 
         groupRepository.save(group);
