@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="wielrennen" />
+        <module name="koers" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Koers" options="-parameters" />
       <module name="group" options="-parameters" />
+      <module name="koers" options="-parameters" />
       <module name="wielrennen" options="-parameters" />
     </option>
   </component>
