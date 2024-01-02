@@ -13,16 +13,16 @@ services:
   volumes:
     - mysql_wielrennen_data:/var/lib/mysql
   environment:
-   MYSQL_ROOT_PASSWORD: abc123
+   MYSQL_ROOT_PASSWORD: 1234
     
  mysql-koers:
   image: mysql:latest
   ports:
     - 3307:3306
   volumes:
-    - mysql_Koers_data:/var/lib/mysql
+    - mysql_koers_data:/var/lib/mysql
   environment:
-   MYSQL_ROOT_PASSWORD: abc123
+   MYSQL_ROOT_PASSWORD: 1234
     
  group:
   depends_on:

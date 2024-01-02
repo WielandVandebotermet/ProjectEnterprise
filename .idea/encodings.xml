@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Group/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Koers/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/group/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/koers/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wielrennen/src/main/java" charset="UTF-8" />
   </component>
 </project>
