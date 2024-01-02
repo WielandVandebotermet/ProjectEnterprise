@@ -13,7 +13,7 @@ import lombok.*;
 public class Wielrenner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private String id;
     private String Firstname;
     private String Lastname;
     private String GroupCode;
