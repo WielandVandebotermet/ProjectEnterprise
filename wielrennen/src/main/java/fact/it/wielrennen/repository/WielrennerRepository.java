@@ -9,4 +9,6 @@ import java.util.List;
 
 @Repository
 @Transactional
-public interface WielrennerRepository extends JpaRepository<Wielrenner, Long> { }
+public interface WielrennerRepository extends JpaRepository<Wielrenner, Long> {
+    List<Wielrenner> findByGroupCode(List<String> GroupCode);
+}
