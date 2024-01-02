@@ -3,7 +3,7 @@ name: Build and deliver containers
 on: push
 
 jobs:
-  group3:
+  group:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver group container
     steps:
@@ -25,10 +25,10 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/group3:latest ./group
+        run: docker build -t ${{ secrets.DOCKER_USER }}/group:latest ./group
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/group3:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/group:latest
   koers:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver koers container
