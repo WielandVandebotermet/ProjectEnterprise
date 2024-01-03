@@ -55,7 +55,7 @@ jobs:
 
       - name: Upload container to Docker Hub with Push
         run: docker push ${{ secrets.DOCKER_USER }}/koers2:latest
-  wielrennen3:
+  wielrennen4:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver wielrennen container
     steps:
@@ -77,10 +77,10 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/wielrennen3:latest ./wielrennen
+        run: docker build -t ${{ secrets.DOCKER_USER }}/wielrennen4:latest ./wielrennen
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/wielrennen3:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/wielrennen4:latest
   apigateway5:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver api-gateway container

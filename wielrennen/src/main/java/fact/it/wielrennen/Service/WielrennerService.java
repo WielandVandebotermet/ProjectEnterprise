@@ -18,34 +18,33 @@ public class WielrennerService {
     private final WielrennerRepository wielrennerRepository;
     private final WebClient webClient;
 
-
     @PostConstruct
     public void LoadData() {
-        if(wielrennerRepository.count() > 0) {
+        if(wielrennerRepository.count() <= 0) {
             Wielrenner wielrenner = new Wielrenner();
             wielrenner.setFirstname("Wieland");
             wielrenner.setLastname("Vandebotermet");
-            wielrenner.setGroupCode("1");
+            wielrenner.setGroupCode("EQS");
 
             Wielrenner wielrenner1 = new Wielrenner();
             wielrenner1.setFirstname("Lander");
             wielrenner1.setLastname("Hens");
-            wielrenner1.setGroupCode("1");
+            wielrenner1.setGroupCode("EQS");
 
             Wielrenner wielrenner2 = new Wielrenner();
             wielrenner2.setFirstname("Maarten");
             wielrenner2.setLastname("Jacobs");
-            wielrenner2.setGroupCode("1");
+            wielrenner2.setGroupCode("EQS");
 
             Wielrenner wielrenner3 = new Wielrenner();
             wielrenner3.setFirstname("Natan");
             wielrenner3.setLastname("Brackel");
-            wielrenner3.setGroupCode("2");
+            wielrenner3.setGroupCode("LTS");
 
             Wielrenner wielrenner4 = new Wielrenner();
             wielrenner4.setFirstname("Tibbo");
             wielrenner4.setLastname("LeemPut");
-            wielrenner4.setGroupCode("2");
+            wielrenner4.setGroupCode("LTS");
 
             wielrennerRepository.save(wielrenner);
             wielrennerRepository.save(wielrenner1);

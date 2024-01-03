@@ -54,7 +54,7 @@ services:
   depends_on:
     - koers
     - group
-  image: wielandvandebotermet/wielrennen3
+  image: wielandvandebotermet/wielrennen4
   ports:
     - 8081:8081
   links:
