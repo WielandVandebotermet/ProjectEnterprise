@@ -68,7 +68,7 @@ services:
    MYSQL_DB_HOST: mysql-wielrennen
    MYSQL_DB_PORT: 3306
 
-  api-gateway:
+ api-gateway:
    depends_on:
      - koers
      - group
