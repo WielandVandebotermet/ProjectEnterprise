@@ -86,12 +86,14 @@ spring:
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
             - Path=/wielrennen
+            - Method=POST
           filters:
             - SetPath=/api/wielrennen
         - id: wielrennen-all
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
             - Path=/wielrennen-all
+            - Method=GET
           filters:
             - SetPath=/api/wielrennen/all
         - id: wielrennen-delete
