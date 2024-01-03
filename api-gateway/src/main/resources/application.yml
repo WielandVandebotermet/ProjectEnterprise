@@ -22,21 +22,21 @@ spring:
         - id: group-all
           uri: http://${GROUP_BASEURL:localhost:8080}
           predicates:
-            - Path=/group
+            - Path=/group-all
             - Method=GET
           filters:
             - SetPath=/api/group/all
         - id: group-delete
           uri: http://${GROUP_BASEURL:localhost:8080}
           predicates:
-            - Path=/group
+            - Path=/group-delete
             - Method=DELETE
           filters:
             - SetPath=/api/group/Delete
         - id: group-Edit
           uri: http://${GROUP_BASEURL:localhost:8080}
           predicates:
-            - Path=/group
+            - Path=/group-Edit
             - Method=PUT
           filters:
             - SetPath=/api/group/Edit
@@ -45,25 +45,27 @@ spring:
           uri: http://${KOERS_BASEURL:localhost:8082}
           predicates:
             - Path=/koers
+            - Method=POST
           filters:
             - SetPath=/api/koers
         - id: koers-all
           uri: http://${KOERS_BASEURL:localhost:8082}
           predicates:
-            - Path=/koers
+            - Path=/koers-all
+            - Method=GET
           filters:
             - SetPath=/api/koers/all
         - id: koers-delete
           uri: http://${KOERS_BASEURL:localhost:8082}
           predicates:
-            - Path=/koers
+            - Path=/koers-delete
             - Method=DELETE
           filters:
             - SetPath=/api/koers/Delete
         - id: koers-Edit
           uri: http://${KOERS_BASEURL:localhost:8082}
           predicates:
-            - Path=/koers
+            - Path=/koers-Edit
             - Method=PUT
           filters:
             - SetPath=/api/koers/Edit
@@ -77,20 +79,20 @@ spring:
         - id: wielrennen-all
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen
+            - Path=/wielrennen-all
           filters:
             - SetPath=/api/wielrennen/all
         - id: wielrennen-delete
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen
+            - Path=/wielrennen-delete
             - Method=DELETE
           filters:
             - SetPath=/api/wielrennen/Delete
         - id: wielrennen-Edit
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen
+            - Path=/wielrennen-Edit
             - Method=PUT
           filters:
             - SetPath=/api/wielrennen/Edit
