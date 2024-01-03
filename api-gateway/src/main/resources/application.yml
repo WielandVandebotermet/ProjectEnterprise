@@ -82,31 +82,31 @@ spring:
           filters:
             - SetPath=/api/koers/Edit
 
-        - id: wielrennen
+        - id: wielrenner
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen
+            - Path=/wielrenner
             - Method=POST
           filters:
-            - SetPath=/api/wielrennen
-        - id: wielrennen-all
+            - SetPath=/api/wielrenner
+        - id: wielrenner-all
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen-all
+            - Path=/wielrenner-all
             - Method=GET
           filters:
-            - SetPath=/api/wielrennen/all
+            - SetPath=/api/wielrenner/all
         - id: wielrennen-delete
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen-delete/{id}
+            - Path=/wielrenner-delete/{id}
             - Method=DELETE
           filters:
-            - SetPath=/api/wielrennen/Delete
-        - id: wielrennen-Edit
+            - SetPath=/api/wielrenner/Delete
+        - id: wielrenner-Edit
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrennen-Edit/{id}
+            - Path=/wielrenner-Edit/{id}
             - Method=PUT
           filters:
-            - SetPath=/api/wielrennen/Edit
+            - SetPath=/api/wielrenner/Edit

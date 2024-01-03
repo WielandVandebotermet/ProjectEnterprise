@@ -76,14 +76,14 @@ public class KoersService {
         koersRepository.deleteById((long) id);
     }
 
-        public List<KoersResponse> getAllKoerses() {
+    public List<KoersResponse> getAllKoerses() {
             List<Koers> koers = koersRepository.findAll();
 
-            return koers.stream().map(this::mapToProductResponse).toList();
-        }
+            return koers.stream().map(this::mapToKoersResponse).toList();
+    }
 
-        private KoersResponse mapToProductResponse(Koers koers) {
-            return KoersResponse.builder()
+    private KoersResponse mapToKoersResponse(Koers koers) {
+        return KoersResponse.builder()
                     .id(koers.getId())
                     .Name(koers.getName())
                     .Points(koers.getPoints())

@@ -40,7 +40,7 @@ public class Wielrennercontroller {
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<WielrennerResponse> getAllKoerses() {
+    public List<WielrennerResponse> getAllWielrenners() {
         return wielrennerService.getAllwielrenners();
     }
 

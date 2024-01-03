@@ -87,10 +87,10 @@ public class WielrennerService {
     public List<WielrennerResponse> getAllwielrenners() {
         List<Wielrenner> wielrenner = wielrennerRepository.findAll();
 
-        return wielrenner.stream().map(this::mapToProductResponse).toList();
+        return wielrenner.stream().map(this::mapToWielrennerResponse).toList();
     }
 
-    private WielrennerResponse mapToProductResponse(Wielrenner wielrenner) {
+    private WielrennerResponse mapToWielrennerResponse(Wielrenner wielrenner) {
         return WielrennerResponse.builder()
                 .id(wielrenner.getId())
                 .Firstname(wielrenner.getFirstname())
