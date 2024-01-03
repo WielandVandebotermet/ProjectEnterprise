@@ -73,7 +73,7 @@ services:
      - koers
      - group
      - wielrennen
-   image: wielandvandebotermet/api-gateway
+   image: wielandvandebotermet/api-gateway2
    ports:
      - 8083:8083
    links:
