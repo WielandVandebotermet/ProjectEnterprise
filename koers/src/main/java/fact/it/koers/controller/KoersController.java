@@ -24,18 +24,18 @@ public class KoersController {
         koersService.createKoers(koersRequest);
     }
 
-    @DeleteMapping("/Delete")
+    @DeleteMapping("/Delete/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void DeleteKoers
-            (@RequestParam int id) {
-        koersService.deleteKoers(id);
+            (@PathVariable("id") String id) {
+        koersService.deleteKoers(Integer.parseInt(id));
     }
 
-    @PutMapping("/Edit")
+    @PutMapping("/Edit/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void EditKoers
-            (@RequestParam int id, int points, String name) {
-         koersService.editKoers(id, points, name);
+            (@PathVariable("id") String id, @RequestBody KoersRequest koersRequest) {
+         koersService.editKoers(Integer.parseInt(id), koersRequest);
     }
 
 

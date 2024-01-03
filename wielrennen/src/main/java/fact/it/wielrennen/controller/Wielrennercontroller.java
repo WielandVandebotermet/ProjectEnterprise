@@ -23,18 +23,18 @@ public class Wielrennercontroller {
     }
 
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/Delete/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void DeleteWielrenners
-            (@RequestParam int id) {
-        wielrennerService.deleteWielrenners(id);
+            (@PathVariable("id") String id) {
+        wielrennerService.deleteWielrenners(Integer.parseInt(id));
     }
 
-    @PutMapping("/edit")
+    @PutMapping("/Edit/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void EditWielrenners
-            (@RequestParam int id, String Firstname, String Lastname, String GroupCode) {
-        wielrennerService.editWielrenners(id,Firstname,Lastname,GroupCode);
+            (@PathVariable("id") String id, @RequestBody WielrennerRequest wielrennerRequest) {
+        wielrennerService.editWielrenners(Integer.parseInt(id),wielrennerRequest);
 
     }
 

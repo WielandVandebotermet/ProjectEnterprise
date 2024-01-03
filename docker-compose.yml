@@ -27,7 +27,7 @@ services:
  group:
   depends_on:
     - mongo-group
-  image: wielandvandebotermet/group69
+  image: wielandvandebotermet/group70
   ports:
     - 8080:8080
   links:
@@ -39,7 +39,7 @@ services:
  koers:
   depends_on:
     - mysql-koers
-  image: wielandvandebotermet/koers
+  image: wielandvandebotermet/koers2
   ports:
     - 8082:8082
   links:
@@ -54,7 +54,7 @@ services:
   depends_on:
     - koers
     - group
-  image: wielandvandebotermet/wielrennen
+  image: wielandvandebotermet/wielrennen2
   ports:
     - 8081:8081
   links:
@@ -73,7 +73,7 @@ services:
      - koers
      - group
      - wielrennen
-   image: wielandvandebotermet/api-gateway2
+   image: wielandvandebotermet/api-gateway3
    ports:
      - 8083:8083
    links:

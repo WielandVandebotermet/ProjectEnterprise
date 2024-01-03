@@ -36,18 +36,18 @@ public class GroupController {
         return groupService.getAllGroups();
     }
 
-    @DeleteMapping("/Delete")
+    @DeleteMapping("/Delete/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void DeleteGroup
-            (@RequestParam String id) {
+            (@PathVariable("id") String id) {
         groupService.deleteGroup(id);
     }
 
-    @PutMapping("/Edit")
+    @PutMapping("/Edit/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void EditGroup
-            (@RequestParam String id, String GroupCode, String name) {
-        groupService.editGroup(id, GroupCode, name);
+            (@PathVariable("id") String id, @RequestBody GroupRequest groupRequest) {
+        groupService.editGroup(id, groupRequest);
     }
 }
 

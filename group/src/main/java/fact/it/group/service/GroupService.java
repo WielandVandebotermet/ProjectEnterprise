@@ -61,19 +61,20 @@ public class GroupService {
         return products.stream().map(this::mapToProductResponse).toList();
     }
 
-    public void editGroup(String id, String GroupCode, String name){
+    public void editGroup(String id, GroupRequest groupRequest){
         Group group = groupRepository.findById(id).orElse(null);
+        if(group != null)
+        {
+            group.setId(id);
+            group.setGroupCode(groupRequest.getGroupCode());
+            group.setName(groupRequest.getName());
 
-        if(GroupCode != group.getGroupCode() && group != null) {
-            group.setGroupCode(GroupCode);
+            groupRepository.save(group);
         }
-        if(name != group.getName() && group != null) {
-            group.setName(name);
-        }
-        groupRepository.save(group);
 
     }
     public void deleteGroup(String id){
+
         groupRepository.deleteById(id);
     }
 

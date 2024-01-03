@@ -3,7 +3,7 @@ name: Build and deliver containers
 on: push
 
 jobs:
-  group69:
+  group70:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver group container
     steps:
@@ -25,11 +25,11 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/group69:latest ./group
+        run: docker build -t ${{ secrets.DOCKER_USER }}/group70:latest ./group
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/group69:latest
-  koers:
+        run: docker push ${{ secrets.DOCKER_USER }}/group70:latest
+  koers2:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver koers container
     steps:
@@ -51,11 +51,11 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/koers:latest ./koers
+        run: docker build -t ${{ secrets.DOCKER_USER }}/koers2:latest ./koers
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/koers:latest
-  wielrennen:
+        run: docker push ${{ secrets.DOCKER_USER }}/koers2:latest
+  wielrennen2:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver wielrennen container
     steps:
@@ -77,11 +77,11 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/wielrennen:latest ./wielrennen
+        run: docker build -t ${{ secrets.DOCKER_USER }}/wielrennen2:latest ./wielrennen
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/wielrennen:latest
-  apigateway2:
+        run: docker push ${{ secrets.DOCKER_USER }}/wielrennen2:latest
+  apigateway3:
     runs-on: ubuntu-latest
     name: Java 17 build, test, deliver api-gateway container
     steps:
@@ -103,7 +103,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/api-gateway2:latest ./api-gateway
+        run: docker build -t ${{ secrets.DOCKER_USER }}/api-gateway3:latest ./api-gateway
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/api-gateway2:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/api-gateway3:latest

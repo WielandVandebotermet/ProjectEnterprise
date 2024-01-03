@@ -70,19 +70,18 @@ public class WielrennerService {
     public void deleteWielrenners(int id){
         wielrennerRepository.deleteById((long) id);
     }
-    public void editWielrenners(int id,String Firstname,String Lastname, String GroupCode){
+    public void editWielrenners(int id, WielrennerRequest wielrennerRequest){
         Wielrenner wielrenner = wielrennerRepository.findById((long) id).orElse(null);
 
-        if(Firstname != wielrenner.getFirstname() && wielrenner != null) {
-            wielrenner.setFirstname(Firstname);
+        if(wielrenner != null)
+        {
+            wielrenner.setId(id);
+            wielrenner.setFirstname(wielrennerRequest.getFirstname());
+            wielrenner.setLastname(wielrennerRequest.getLastname());
+            wielrenner.setGroupCode(wielrennerRequest.getGroupCode());
+
+            wielrennerRepository.save(wielrenner);
         }
-        if(Lastname != wielrenner.getLastname() && wielrenner != null) {
-            wielrenner.setLastname(Lastname);
-        }
-        if(GroupCode != wielrenner.getGroupCode() && wielrenner != null) {
-            wielrenner.setGroupCode(GroupCode);
-        }
-        wielrennerRepository.save(wielrenner);
     }
 
     public List<WielrennerResponse> getAllwielrenners() {

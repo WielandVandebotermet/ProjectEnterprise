@@ -59,17 +59,18 @@ public class KoersService {
             koersRepository.save(koers);
         }
 
-    public void editKoers(int id, int points, String name){
+    public void editKoers(int id, KoersRequest koersRequest){
         Koers koers = koersRepository.findById((long) id).orElse(null);
 
-        if(points != koers.getPoints() && koers != null) {
-            koers.setPoints(points);
-        }
-        if(name != koers.getName() && koers != null) {
-            koers.setName(name);
-        }
-        koersRepository.save(koers);
+        if(koers != null)
+        {
+            koers.setId(id);
+            koers.setWielrennerId(koersRequest.getWielrennerId());
+            koers.setPoints(koersRequest.getPoints());
+            koers.setName(koersRequest.getName());
 
+            koersRepository.save(koers);
+        }
     }
     public void deleteKoers(int id){
         koersRepository.deleteById((long) id);
