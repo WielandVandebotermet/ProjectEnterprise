@@ -41,7 +41,7 @@ spring:
         - id: group-delete
           uri: http://${GROUP_BASEURL:localhost:8080}
           predicates:
-            - Path=/group-delete/{id}
+            - Path=/group-Delete/{id}
             - Method=DELETE
           filters:
             - SetPath=/api/group/Delete
@@ -70,7 +70,7 @@ spring:
         - id: koers-delete
           uri: http://${KOERS_BASEURL:localhost:8082}
           predicates:
-            - Path=/koers-delete/{id}
+            - Path=/koers-Delete/{id}
             - Method=DELETE
           filters:
             - SetPath=/api/koers/Delete
@@ -99,7 +99,7 @@ spring:
         - id: wielrennen-delete
           uri: http://${WIELRENNEN_BASEURL:localhost:8081}
           predicates:
-            - Path=/wielrenner-delete/{id}
+            - Path=/wielrenner-Delete/{id}
             - Method=DELETE
           filters:
             - SetPath=/api/wielrenner/Delete
