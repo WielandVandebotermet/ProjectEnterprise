@@ -54,7 +54,7 @@ services:
   depends_on:
     - koers
     - group
-  image: wielandvandebotermet/wielrennen2
+  image: wielandvandebotermet/wielrennen3
   ports:
     - 8081:8081
   links:
@@ -73,7 +73,7 @@ services:
      - koers
      - group
      - wielrennen
-   image: wielandvandebotermet/api-gateway4
+   image: wielandvandebotermet/api-gateway5
    ports:
      - 8083:8083
    links:
