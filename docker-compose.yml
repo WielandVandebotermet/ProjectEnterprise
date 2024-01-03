@@ -68,6 +68,23 @@ services:
    MYSQL_DB_HOST: mysql-wielrennen
    MYSQL_DB_PORT: 3306
 
+  api-gateway:
+   depends_on:
+     - koers
+     - group
+     - wielrennen
+   image: wielandvandebotermet/api-gateway
+   ports:
+     - 8083:8083
+   links:
+     - koers
+     - group
+     - wielrennen
+   environment:
+     GROUP_BASEURL: group:8080
+     KOERS_BASEURL: koers:8082
+     WIELRENNEN_BASEURL: wielrennen:8081
+
 volumes:
  mongodb_group_data:
  mysql_koers_data:

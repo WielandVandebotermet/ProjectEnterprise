@@ -24,19 +24,20 @@ public class KoersController {
         koersService.createKoers(koersRequest);
     }
 
-    @GetMapping("/Delete")
+    @DeleteMapping("/Delete")
     @ResponseStatus(HttpStatus.OK)
     public void DeleteKoers
             (@RequestParam int id) {
         koersService.deleteKoers(id);
     }
 
-    @GetMapping("/Edit")
+    @PutMapping("/Edit")
     @ResponseStatus(HttpStatus.OK)
     public void EditKoers
             (@RequestParam int id, int points, String name) {
          koersService.editKoers(id, points, name);
     }
+
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)

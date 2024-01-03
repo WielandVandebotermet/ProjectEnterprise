@@ -61,6 +61,22 @@ public class GroupService {
         return products.stream().map(this::mapToProductResponse).toList();
     }
 
+    public void editGroup(String id, String GroupCode, String name){
+        Group group = groupRepository.findById(id).orElse(null);
+
+        if(GroupCode != group.getGroupCode() && group != null) {
+            group.setGroupCode(GroupCode);
+        }
+        if(name != group.getName() && group != null) {
+            group.setName(name);
+        }
+        groupRepository.save(group);
+
+    }
+    public void deleteGroup(String id){
+        groupRepository.deleteById(id);
+    }
+
     private GroupResponse mapToProductResponse(Group group) {
         return GroupResponse.builder()
                 .id(group.getId())

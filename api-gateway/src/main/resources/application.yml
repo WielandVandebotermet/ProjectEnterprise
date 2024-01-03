@@ -1,0 +1,96 @@
+server:
+  port: 8083
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: INFO
+    reactor.netty: TRACE
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: group
+          uri: http://${GROUP_BASEURL:localhost:8080}
+          predicates:
+            - Path=/group
+            - Method=POST
+          filters:
+            - SetPath=/api/group
+        - id: group-all
+          uri: http://${GROUP_BASEURL:localhost:8080}
+          predicates:
+            - Path=/group
+            - Method=GET
+          filters:
+            - SetPath=/api/group/all
+        - id: group-delete
+          uri: http://${GROUP_BASEURL:localhost:8080}
+          predicates:
+            - Path=/group
+            - Method=DELETE
+          filters:
+            - SetPath=/api/group/Delete
+        - id: group-Edit
+          uri: http://${GROUP_BASEURL:localhost:8080}
+          predicates:
+            - Path=/group
+            - Method=PUT
+          filters:
+            - SetPath=/api/group/Edit
+
+        - id: koers
+          uri: http://${KOERS_BASEURL:localhost:8082}
+          predicates:
+            - Path=/koers
+          filters:
+            - SetPath=/api/koers
+        - id: koers-all
+          uri: http://${KOERS_BASEURL:localhost:8082}
+          predicates:
+            - Path=/koers
+          filters:
+            - SetPath=/api/koers/all
+        - id: koers-delete
+          uri: http://${KOERS_BASEURL:localhost:8082}
+          predicates:
+            - Path=/koers
+            - Method=DELETE
+          filters:
+            - SetPath=/api/koers/Delete
+        - id: koers-Edit
+          uri: http://${KOERS_BASEURL:localhost:8082}
+          predicates:
+            - Path=/koers
+            - Method=PUT
+          filters:
+            - SetPath=/api/koers/Edit
+
+        - id: wielrennen
+          uri: http://${WIELRENNEN_BASEURL:localhost:8081}
+          predicates:
+            - Path=/wielrennen
+          filters:
+            - SetPath=/api/wielrennen
+        - id: wielrennen-all
+          uri: http://${WIELRENNEN_BASEURL:localhost:8081}
+          predicates:
+            - Path=/wielrennen
+          filters:
+            - SetPath=/api/wielrennen/all
+        - id: wielrennen-delete
+          uri: http://${WIELRENNEN_BASEURL:localhost:8081}
+          predicates:
+            - Path=/wielrennen
+            - Method=DELETE
+          filters:
+            - SetPath=/api/wielrennen/Delete
+        - id: wielrennen-Edit
+          uri: http://${WIELRENNEN_BASEURL:localhost:8081}
+          predicates:
+            - Path=/wielrennen
+            - Method=PUT
+          filters:
+            - SetPath=/api/wielrennen/Edit

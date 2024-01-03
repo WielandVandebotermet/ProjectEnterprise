@@ -22,25 +22,26 @@ public class Wielrennercontroller {
         wielrennerService.createWielrennen(wielrennerRequest);
     }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<WielrennerResponse> getAllWielrenners() {
-        return wielrennerService.getAllwielrenners();
-    }
 
-    @GetMapping("/delete")
+    @DeleteMapping("/delete")
     @ResponseStatus(HttpStatus.OK)
     public void DeleteWielrenners
             (@RequestParam int id) {
         wielrennerService.deleteWielrenners(id);
     }
 
-    @GetMapping("/edit")
+    @PutMapping("/edit")
     @ResponseStatus(HttpStatus.OK)
     public void EditWielrenners
             (@RequestParam int id, String Firstname, String Lastname, String GroupCode) {
         wielrennerService.editWielrenners(id,Firstname,Lastname,GroupCode);
 
+    }
+
+    @GetMapping("/all")
+    @ResponseStatus(HttpStatus.OK)
+    public List<WielrennerResponse> getAllKoerses() {
+        return wielrennerService.getAllwielrenners();
     }
 
 }

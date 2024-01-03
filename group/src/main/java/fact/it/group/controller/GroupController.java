@@ -35,5 +35,19 @@ public class GroupController {
     public List<GroupResponse> getAllProducts() {
         return groupService.getAllGroups();
     }
+
+    @DeleteMapping("/Delete")
+    @ResponseStatus(HttpStatus.OK)
+    public void DeleteGroup
+            (@RequestParam String id) {
+        groupService.deleteGroup(id);
+    }
+
+    @PutMapping("/Edit")
+    @ResponseStatus(HttpStatus.OK)
+    public void EditGroup
+            (@RequestParam String id, String GroupCode, String name) {
+        groupService.editGroup(id, GroupCode, name);
+    }
 }
 
