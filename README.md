@@ -5,6 +5,10 @@ Links:
 <ul>
  <li>https://github.com/WielandVandebotermet/ProjectEnterprise/actions</li>
  <li>https://cloud.okteto.com/spaces/ede-wielandvandebotermet</li>
+ <li>https://api-gateway-ede-wielandvandebotermet.cloud.okteto.net/</li>
+ <li>https://group-ede-wielandvandebotermet.cloud.okteto.net/</li>
+ <li>https://koers-ede-wielandvandebotermet.cloud.okteto.net/</li>
+ <li>https://wielrennen-ede-wielandvandebotermet.cloud.okteto.net/</li>
 </ul>
 
 <ul>
