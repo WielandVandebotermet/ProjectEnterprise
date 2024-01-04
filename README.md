@@ -21,3 +21,30 @@ Group
  ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/c04ad6f9-b4f3-4c9b-8968-10678f10ddfd)
  ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/0a965226-709e-4099-b8ce-50c1e4160e9a)
 </ul>
+
+<ul>
+Koers
+<li>Koers all(Get)</li>
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/839684b0-d5f0-431e-bffe-d177dd8235ab)
+<li>Koers post(Post)</li>
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/6040b2d1-1335-476a-a58e-1dc71ea79f6a)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/78df903b-f540-49e3-8732-b38cf945f78c)
+<li>Koers Edit(Put)</li>
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/8ebf49ce-c42c-47f4-9001-d8300818f71d)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/c78c3dbd-0eac-4a2f-a37d-dd1e8e15576d)
+<li>Koers Delete(Del)</li>
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/0a262788-8416-4505-943f-14011856787a)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/caaf2d75-a407-4d06-8493-65b729a903fa)
+</ul>
+
+<ul>
+Wielrennen
+<li>Wielrennen all(Get)</li>
+
+<li>Wielrennen post(Post)</li>
+
+<li>Wielrennen Edit(Put)</li>
+
+<li>Wielrennen Delete(Del)</li>
+
+</ul>
