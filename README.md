@@ -40,11 +40,14 @@ Koers
 <ul>
 Wielrennen
 <li>Wielrennen all(Get)</li>
-
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/5f630b8b-979c-4ce7-a045-37d2d2b5e4ff)
 <li>Wielrennen post(Post)</li>
-
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/8c88ee02-f77b-4702-884b-05a8072a1160)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/b7f74fa8-e1a7-4b40-8547-2a31c74137b2)
 <li>Wielrennen Edit(Put)</li>
-
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/675291af-8e18-4697-8925-c09e36eb3204)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/3549f3b3-3831-4f8d-815a-152975b10bc3)
 <li>Wielrennen Delete(Del)</li>
-
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/2359d69a-e1c7-44ab-a63e-11412c9d90e1)
+ ![image](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/b0ce8bef-8dcc-4079-b482-054eb4b41155)
 </ul>
