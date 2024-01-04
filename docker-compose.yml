@@ -52,17 +52,11 @@ services:
 
  wielrennen:
   depends_on:
-    - koers
-    - group
+    - mysql-wielrennen
   image: wielandvandebotermet/wielrennen4
   ports:
     - 8081:8081
-  links:
-    - koers
-    - group
   environment:
-   PRODUCT_SERVICE_BASEURL: group:8080
-   INVENTORY_INFO_SERVICE_BASEURL: koers:8082
    MYSQL_DB_USERNAME: root
    MYSQL_DB_PASSWORD: 1234
    MYSQL_DB_HOST: mysql-wielrennen
