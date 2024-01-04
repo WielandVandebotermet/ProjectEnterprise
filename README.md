@@ -1,6 +1,11 @@
 Het gekozen thema is wielrennen.
 ik heb 3 Services: Group, Koers en wielrennen. Daarnaast heb ik ook nog een api gateway.
 
+Deployment diagram:
+![EDE Deployment diagram-2](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/b04aa2cc-d9c8-4c44-803a-216d3f13b2e1)
+![EDE Deployment diagram-1](https://github.com/WielandVandebotermet/ProjectEnterprise/assets/71000992/d83c795e-63d0-408e-b29a-32dca7d21106)
+
+
 Links:
 <ul>
  <li>https://github.com/WielandVandebotermet/ProjectEnterprise/actions</li>
